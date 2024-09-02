@@ -1,0 +1,30 @@
+form{
+    margin-top: 1%;
+}
+
+.fa-solid{
+    font-size: 50px;
+    color: cadetblue;
+}
+
+body{
+    background-color: 	#D3D3D3;
+}
+
+.form-label{
+    align-items: center;
+}
+
+h1{
+    font-size: 18px;
+    margin-top: 08%;
+}
+
+.btn{
+    width: 40%;
+    margin-top: 3%;
+}
+
+.btn-primary{
+    background-color: cadetblue;
+}
