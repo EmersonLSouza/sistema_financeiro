@@ -18,20 +18,20 @@
           <div class="col-sm-12 col-md-4" style="margin-top: 16%;">
             <i class="fa-solid fa-user"></i>
             <h1>Lançamento</h1>
-            <form>
+            <form action="php/insert_usuario.php" method="post">
                 <div class="mb-3">
                   <label for="lançamento" class="form-label"> Data de Lançamento</label>
-                  <input type="email" class="form-control" id="lançamento" aria-describedby="emailHelp">
+                  <input type="date" class="form-control" id="lançamento" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text"></div>
                 </div>
                 <div class="mb-3">
                   <label for="lançamento" class="form-label"> Descrição de Lançamento</label>
-                  <input type="email" class="form-control" id="lançamento" aria-describedby="emailHelp">
+                  <input type="varchar" class="form-control" id="lançamento" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text"></div>
                 </div>
                 <div class="mb-3">
                   <label for="categoria" class="form-label">Categoria</label>
-                  <input type="email" class="form-control" id="categoria" aria-describedby="emailHelp">
+                  <input type="text" class="form-control" id="categoria" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text"></div>
                 </div>
                 <a href="index.html" type="submit" class="btn btn-primary">Cadastre-se</a>
