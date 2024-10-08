@@ -6,7 +6,7 @@ $password = $_POST['senha'];
 
 //link da conexão
 
-include 'conexao.php'
+include 'conexao.php';
 
 //Pegar os dados no banco
  
@@ -15,6 +15,7 @@ $sql = "SELECT * FROM tb_user WHERE email = '$email'";
 $query = $conexao->query($sql);
 
 $resultado = $query->fetch_assoc();
+
 
 print_r($resultado);
 
