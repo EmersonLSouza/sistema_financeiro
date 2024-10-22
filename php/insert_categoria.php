@@ -1,17 +1,12 @@
 <?php
 
-//Conectando no Banco de Dados
-
 include 'conexao.php';
 
-//Receber os Dados do Formulário
-
 $nome = $_POST['nome'];
-$email = $_POST ['email'];
-$cargo = $_POST ['cargo'];
-$senha = $_POST ['senha'];
+$descricao = $_POST['descricao'];
+$categoria = $_POST['categoria'];
 
-$sql = "INSERT INTO tb_user VALUES (null, '$nome', '$email', '$cargo', '$senha')";
+$sql = "INSERT INTO tb_categoria VALUES (null, '$nome', $categoria, '$descricao')";
 
 // Executar o Insert no Banco de Dados
 
@@ -22,11 +17,5 @@ if ($conexao -> query($sql)){
 else{
     echo "Falha na Conexão com o Banco de Dados";
 }
-
-
-
-
-
-
 
 ?>

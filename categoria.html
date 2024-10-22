@@ -18,23 +18,23 @@
           <div class="col-sm-12 col-md-4" style="margin-top: 16%;">
             <i class="fa-solid fa-user"></i>
             <h1>Categoria</h1>
-            <form>
+            <form action="php/insert_categoria.php" method="post">
                 <div class="mb-3">
                   <label for="nome" class="form-label"> Nome</label>
-                  <input type="varchar" class="form-control" id="nome" aria-describedby="emailHelp">
+                  <input type="text" class="form-control" id="nome" name="nome" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text"></div>
                 </div>
                 <div class="mb-3">
-                  <label for="descrição" class="form-label"> Descrição</label>
-                  <input type="varchar" class="form-control" id="descrição" aria-describedby="emailHelp">
+                  <label for="descricao" class="form-label"> Descrição</label>
+                  <input type="text" class="form-control" id="descricao" name="descricao" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text"></div>
                 </div>
                 <div class="mb-3">
                   <label for="categoria" class="form-label"> Tipo de Categoria</label>
-                  <input type="int" class="form-control" id="categoria" aria-describedby="emailHelp">
+                  <input type="number" name="categoria" class="form-control" id="categoria" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text"></div>
                 </div>
-                <a href="lançamento.html" type="submit" class="btn btn-primary">Continuar</a>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
               </form>
           </div>
           <div class="col-sm-12 col-md-4">
