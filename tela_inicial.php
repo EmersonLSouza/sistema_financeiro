@@ -9,26 +9,28 @@
     <script src="https://kit.fontawesome.com/c0f408d1cc.js" crossorigin="anonymous"></script>
     </head>
 <body>
-    <div style="">
-    <?php
-    session_start();
-    if (isset($_SESSION['id'])) {
-        $id = $_SESSION['id'];
-        echo "olá $id";
-         } else{
-          echo "<script>alert('Usuário precisar logar'); history.back();</script>";
-         }
-    ?>
-    </div>
 
     <div class="container text-center text-bs-body-color" style="margin-top: 10%;">
-        <h1 id="TELA">TELA DE LANÇAMENTO</h1>
+    <a class="btn btn-outline-info" href="php/logout.php" role="button">Sair</a>
+    <h1 id="TELA"><?php
+    include 'php/conexao.php';
+    session_start();
+    if (isset($_SESSION['id'])) {
+    $id = $_SESSION['id'];
+    $sql = "SELECT * FROM tb_user WHERE id_usuario = $id";
+    $query = $conexao->query($sql);
+    $resultado = $query->fetch_assoc();
+    echo $resultado['nome']."! ";
+    }else{
+        echo "<script> alert('Você não está logado!'); history.back(); </script>"; 
+    }
+    ?>Seja Bem-Vindo ao Sistema de Lançamentos</h1>
 
         <p>Selecione o Cadastro</p>
     </div>
     <div style="display: flex; flex-direction: column; align-items:center; gap: 20px; margin-top: 50px;">
-    <a href="categoria.html" class="btn btn-success">Categoria</a>
-    <a href="lançamento.html" class="btn btn-success">Lançamento</a>
+    <a href="categoria.php" class="btn btn-success">Categoria</a>
+    <a href="lançamento.php" class="btn btn-success">Lançamento</a>
     </div>
 
 

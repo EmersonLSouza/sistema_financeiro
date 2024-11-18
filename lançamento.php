@@ -10,6 +10,9 @@
 </head>
 <body>
 
+  <div>
+  <a class="btn btn-outline-info" href="php/logout.php" role="button">Sair</a>
+  </div>
     <div class="container text-center">
         <div class="row">
           <div class="col-sm-12 col-md-4">
