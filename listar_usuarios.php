@@ -32,6 +32,9 @@
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-info" href="php/logout.php" role="button">Sair</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -56,6 +59,8 @@
       <th scope="row">1</th>
       <td>Mark</td>
       <td>Otto</td>
+      <td>@mdo</td>
+      <td></td>
       <td>@mdo</td>
     </tr>
     <tr>
