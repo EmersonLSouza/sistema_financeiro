@@ -16,7 +16,7 @@ $sql = "INSERT INTO tb_user VALUES (null, '$nome', '$email', '$cargo', '$senha')
 // Executar o Insert no Banco de Dados
 
 if ($conexao -> query($sql)){
-    echo "<script> alert('✔ Inserido com Sucesso!'); history.back(); </script>";
+    echo "<script> alert('✔ Inserido com Sucesso!'); document.location.href = '../index.html' </script>";
 }
 
 else{

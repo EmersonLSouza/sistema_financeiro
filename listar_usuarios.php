@@ -14,7 +14,7 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Sistema Financeiro</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -55,28 +55,33 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td></td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    <?php
+  include 'php/conexao.php';
+    $sql = "SELECT * FROM tb_user";
+    $query = $conexao->query($sql);
+
+      if ($query->num_rows > 0) {
+        while ($row = $query->fetch_assoc()) {
+          echo "<tr>";
+          echo "<td>" . $row['id_usuario'] . "</td>";
+          echo "<td>" . $row['nome'] . "</td>";
+          echo "<td>" . $row['email'] . "</td>";
+          echo "<td>" . $row['cargo'] . "</td>";
+          echo "<td><a href='php/editar_usuario.php?id=" . $row['id_usuario'] . "'>Editar</a></td>";
+          echo "<td><a href='php/excluir_usuario.php?id=" . $row['id_usuario'] . "' onclick=\"return confirm('Você tem certeza de que deseja excluir este usuário')\">Excluir</a></td>";
+          echo "</tr>";
+        }
+      } else {
+        echo "<tr><td colspan='6'>Usuário não encontrado.</td>>/tr>";
+      }
+      ?>
   </tbody>
 </table>
 </div>
+
+
+  
+      
 
 </body>
 </html>

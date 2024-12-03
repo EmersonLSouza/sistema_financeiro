@@ -11,6 +11,17 @@
 </head>
 <body>
 
+<?php
+include 'conexao.php';
+
+$id = intval($_GET['id']);
+$sql = "SELECT * FROM tb_user WHERE id_usuario = $id";
+$result = $conexao ->query($sql);
+$row = $result->fetch_assoc();
+
+echo $row['nome'];
+?>
+
     <div class="container text-center">
         <div class="row">
           <div class="col-sm-12 col-md-4">
@@ -19,31 +30,32 @@
           <div class="col-sm-12 col-md-4" style="margin-top: 12%;">
             <i class="fa-solid fa-user"></i>
             <h1>Cadastre-se no Website</h1>
-            <form action="php/insert_usuario.php" method="post">
+
+            <form action="php/atualizar_usuario.php" method="post">
                 <div class="mb-3">
                   <label for="nome" class="form-label"> Nome de Usuário</label>
-                  <input type="varchar" class="form-control" id="nome" name="nome" aria-describedby="emailHelp">
+                  <input type="varchar" value="<?php $row ['nome']; ?>" class="form-control" id="nome" name="nome" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text"></div>
                 </div>
+
                 <div class="mb-3">
                   <label for="email" class="form-label"> Endereço de Email</label>
-                  <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                  <input type="email" value="<?php $row ['nome']; ?>" class="form-control" id="email" name="email" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text"></div>
                 </div>
+                
                 <div class="mb-3">
                   <label for="cargo" class="form-label"> Cargo</label>
-                  <input type="text" class="form-control" id="cargo" name="cargo" aria-describedby="emailHelp">
+                  <input type="text" value="<?php $row ['nome']; ?>" class="form-control" id="cargo" name="cargo" aria-describedby="emailHelp">
                   <div id="emailHelp" class="form-text"></div>
                 </div>
-                <div class="mb-3">
-                  <label for="senha" class="form-label">Senha</label>
-                  <input type="password" class="form-control" id="senha" name="senha">
-                </div>
-                <button type="submit" class="btn btn-primary">Cadastre-se</button>
+
+                <button type="submit" class="btn btn-primary">Atualizar Dados</button>
               </form>
           </div>
           <div class="col-sm-12 col-md-4">
             
+       
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

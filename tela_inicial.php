@@ -31,7 +31,7 @@
     <div style="display: flex; flex-direction: column; align-items:center; gap: 20px; margin-top: 50px;">
     <a href="categoria.php" class="btn btn-success">Categoria</a>
     <a href="lançamento.php" class="btn btn-success">Lançamento</a>
-    <a href="listar_usuarios.php" class="btn btn-success">Usuários</a>
+    <a href="listar_usuarios.php" class="btn btn-success">Usuários Cadastrados</a>
     </div>
 
 
